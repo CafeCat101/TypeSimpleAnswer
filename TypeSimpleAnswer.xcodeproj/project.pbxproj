@@ -11,6 +11,15 @@
 		C8C8D4F627226ED500FB0CAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C8D4F527226ED500FB0CAB /* ContentView.swift */; };
 		C8C8D4F827226ED700FB0CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C8D4F727226ED700FB0CAB /* Assets.xcassets */; };
 		C8C8D4FB27226ED700FB0CAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C8D4FA27226ED700FB0CAB /* Preview Assets.xcassets */; };
+		C8C8D5022722728100FB0CAB /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C8D5012722728100FB0CAB /* QuestionView.swift */; };
+		C8C8D5042722729100FB0CAB /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C8D5032722729100FB0CAB /* AnswerView.swift */; };
+		C8C8D506272272A500FB0CAB /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C8D505272272A500FB0CAB /* Lesson.swift */; };
+		C8C8D508272272B100FB0CAB /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C8D507272272B100FB0CAB /* Quiz.swift */; };
+		C8C8D50B2722735A00FB0CAB /* Cartoon Brass Fail.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C8D50A2722735A00FB0CAB /* Cartoon Brass Fail.wav */; };
+		C8C8D50D2722736B00FB0CAB /* Cartoon Big Win.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C8D50C2722736B00FB0CAB /* Cartoon Big Win.wav */; };
+		C8C8D50F2722738400FB0CAB /* Bright Right Answer 4.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8C8D50E2722738400FB0CAB /* Bright Right Answer 4.wav */; };
+		C8C8D51127228A4400FB0CAB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C8D51027228A4400FB0CAB /* Color.swift */; };
+		C8C8D5142723268E00FB0CAB /* clapping_pingu.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C8C8D5132723268E00FB0CAB /* clapping_pingu.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,15 @@
 		C8C8D4F527226ED500FB0CAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C8C8D4F727226ED700FB0CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8C8D4FA27226ED700FB0CAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C8C8D5012722728100FB0CAB /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		C8C8D5032722729100FB0CAB /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
+		C8C8D505272272A500FB0CAB /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		C8C8D507272272B100FB0CAB /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		C8C8D50A2722735A00FB0CAB /* Cartoon Brass Fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Cartoon Brass Fail.wav"; sourceTree = "<group>"; };
+		C8C8D50C2722736B00FB0CAB /* Cartoon Big Win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Cartoon Big Win.wav"; sourceTree = "<group>"; };
+		C8C8D50E2722738400FB0CAB /* Bright Right Answer 4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Bright Right Answer 4.wav"; sourceTree = "<group>"; };
+		C8C8D51027228A4400FB0CAB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		C8C8D5132723268E00FB0CAB /* clapping_pingu.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = clapping_pingu.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +69,17 @@
 		C8C8D4F227226ED500FB0CAB /* TypeSimpleAnswer */ = {
 			isa = PBXGroup;
 			children = (
+				C8C8D5122723267300FB0CAB /* MovieClips */,
+				C8C8D5092722733500FB0CAB /* Sounds */,
 				C8C8D4F327226ED500FB0CAB /* TypeSimpleAnswerApp.swift */,
 				C8C8D4F527226ED500FB0CAB /* ContentView.swift */,
 				C8C8D4F727226ED700FB0CAB /* Assets.xcassets */,
 				C8C8D4F927226ED700FB0CAB /* Preview Content */,
+				C8C8D5012722728100FB0CAB /* QuestionView.swift */,
+				C8C8D5032722729100FB0CAB /* AnswerView.swift */,
+				C8C8D505272272A500FB0CAB /* Lesson.swift */,
+				C8C8D507272272B100FB0CAB /* Quiz.swift */,
+				C8C8D51027228A4400FB0CAB /* Color.swift */,
 			);
 			path = TypeSimpleAnswer;
 			sourceTree = "<group>";
@@ -65,6 +90,24 @@
 				C8C8D4FA27226ED700FB0CAB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C8C8D5092722733500FB0CAB /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C8C8D50E2722738400FB0CAB /* Bright Right Answer 4.wav */,
+				C8C8D50C2722736B00FB0CAB /* Cartoon Big Win.wav */,
+				C8C8D50A2722735A00FB0CAB /* Cartoon Brass Fail.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		C8C8D5122723267300FB0CAB /* MovieClips */ = {
+			isa = PBXGroup;
+			children = (
+				C8C8D5132723268E00FB0CAB /* clapping_pingu.mp4 */,
+			);
+			path = MovieClips;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +169,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8C8D4FB27226ED700FB0CAB /* Preview Assets.xcassets in Resources */,
+				C8C8D50D2722736B00FB0CAB /* Cartoon Big Win.wav in Resources */,
+				C8C8D50F2722738400FB0CAB /* Bright Right Answer 4.wav in Resources */,
+				C8C8D5142723268E00FB0CAB /* clapping_pingu.mp4 in Resources */,
+				C8C8D50B2722735A00FB0CAB /* Cartoon Brass Fail.wav in Resources */,
 				C8C8D4F827226ED700FB0CAB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8C8D506272272A500FB0CAB /* Lesson.swift in Sources */,
 				C8C8D4F627226ED500FB0CAB /* ContentView.swift in Sources */,
+				C8C8D51127228A4400FB0CAB /* Color.swift in Sources */,
+				C8C8D508272272B100FB0CAB /* Quiz.swift in Sources */,
+				C8C8D5022722728100FB0CAB /* QuestionView.swift in Sources */,
+				C8C8D5042722729100FB0CAB /* AnswerView.swift in Sources */,
 				C8C8D4F427226ED500FB0CAB /* TypeSimpleAnswerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

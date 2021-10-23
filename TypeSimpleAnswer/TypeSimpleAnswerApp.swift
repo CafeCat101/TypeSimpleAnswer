@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct TypeSimpleAnswerApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+	@StateObject var lesson = Lesson()
+	var body: some Scene {
+		WindowGroup {
+			ContentView().environmentObject(lesson)
+		}
+	}
 }
