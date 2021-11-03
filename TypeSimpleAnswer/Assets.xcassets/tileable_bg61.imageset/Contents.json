@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "bg61-md-1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "bg61-md-2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

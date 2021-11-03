@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
 	@State private var goToView = "ContentView"
+	@EnvironmentObject var lessonToday: LessonToday
+	
 	var body: some View {
 		if self.goToView == "ContentView" {
 			VStack{
@@ -38,14 +40,18 @@ struct ContentView: View {
 						)
 				}
 				.buttonStyle(PlainButtonStyle())
+				Text(lessonToday.subject)
+					.font(.system(size: 40))
+					.foregroundColor(Color.black)
+					.padding()
 				Spacer()
 			}
 			.background(
-				Image("tile_bg_61_md")
+				Image("tileable_bg61")
 					.resizable(resizingMode: .tile)
 			)
 		}else{
-			QuestionView().transition(.scale)
+			QuestionView().transition(.move(edge: .leading))
 		}
 		
 		//.frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -55,6 +61,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView()
+		ContentView().environmentObject(LessonToday())
 	}
 }

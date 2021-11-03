@@ -10,7 +10,7 @@ import SwiftUI
 struct QuestionView: View {
 	@State private var goToView = "QuestionView"
 	@State private var answer:String = ""
-	@EnvironmentObject var lesson: Lesson
+	@EnvironmentObject var lessonToday: LessonToday
 	@State private var questionText = "Question1:"
 	
 	var body: some View {
@@ -42,10 +42,10 @@ struct QuestionView: View {
 				Spacer()
 					.frame(height:20)
 				Button(action: {
-					if self.answer == lesson.quiz[lesson.currentLessonAt].answer {
-						lesson.quiz[lesson.currentLessonAt].status = 1
+					if self.answer == lessonToday.quiz[lessonToday.currentLessonAt].answer {
+						lessonToday.quiz[lessonToday.currentLessonAt].status = 1
 					}else{
-						lesson.quiz[lesson.currentLessonAt].status = -1
+						lessonToday.quiz[lessonToday.currentLessonAt].status = -1
 					}
 					withAnimation{
 					self.goToView = "AnswerView"
@@ -68,24 +68,24 @@ struct QuestionView: View {
 				Spacer()
 			}
 			.background(
-				Image("old_paper_background")
+				Image("old_paper_background2")
 					.resizable()
 			)
 			.onAppear{
-				if lesson.quiz[lesson.currentLessonAt].status == 1 {
-					lesson.currentLessonAt = lesson.currentLessonAt + 1
+				if lessonToday.quiz[lessonToday.currentLessonAt].status == 1 {
+					lessonToday.currentLessonAt = lessonToday.currentLessonAt + 1
 				}
-				self.questionText = lesson.quiz[lesson.currentLessonAt].asking
+				self.questionText = lessonToday.quiz[lessonToday.currentLessonAt].asking
 			}
 		}else{
-			AnswerView()
+			AnswerView().transition(.move(edge: .leading))
 		}
 	}
 }
 
 struct QuestionView_Previews: PreviewProvider {
 	static var previews: some View {
-		QuestionView().environmentObject(Lesson())
+		QuestionView().environmentObject(LessonToday())
 	}
 }
 

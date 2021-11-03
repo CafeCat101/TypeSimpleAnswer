@@ -50,7 +50,7 @@ class SoundManager {
 }
 
 struct AnswerView: View {
-	@EnvironmentObject var lesson: Lesson
+	@EnvironmentObject var lessonToday: LessonToday
 	@State private var goToView = "AnswerView"
 	
 	var body: some View {
@@ -58,7 +58,7 @@ struct AnswerView: View {
 			VStack{
 				Spacer()
 				
-				if (lesson.quiz[lesson.currentLessonAt].status == 1) && (lesson.currentLessonAt == lesson.quiz.count-1){
+				if (lessonToday.quiz[lessonToday.currentLessonAt].status == 1) && (lessonToday.currentLessonAt == lessonToday.quiz.count-1){
 					HStack{
 						//SoundManager.instance.playMovie(movie: .finishLesson)
 						/*ideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "clapping_pingu", withExtension: "mp4")!))
@@ -81,7 +81,7 @@ struct AnswerView: View {
 						Spacer()
 					}
 				}else{
-					if lesson.quiz[lesson.currentLessonAt].status == 1 {
+					if lessonToday.quiz[lessonToday.currentLessonAt].status == 1 {
 						//correct answer layout
 						Image("correct_answer")
 							.resizable()
@@ -146,11 +146,11 @@ struct AnswerView: View {
 				Spacer()
 			}
 			.background(
-				Image("old_paper_background")
+				Image("old_paper_background2")
 					.resizable()
 			)
 		}else{
-			QuestionView().transition(.scale)
+			QuestionView().transition(.move(edge: .leading))
 		}
 		
 		
@@ -159,6 +159,6 @@ struct AnswerView: View {
 
 struct AnswerView_Previews: PreviewProvider {
 	static var previews: some View {
-		AnswerView().environmentObject(Lesson())
+		AnswerView().environmentObject(LessonToday())
 	}
 }
