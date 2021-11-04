@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class LessonToday: ObservableObject {
 	@Published var subject:String = "我們來打字"
@@ -15,6 +16,7 @@ class LessonToday: ObservableObject {
 		Quiz(asking: "Tarzan是猴子對不對？", answer: "不對", status: 0)
 	]
 	@Published var currentLessonAt = 0
+	@Published var myTheme:MyTheme = MyTheme()
 	
 	init() {
 		loadLocalFile(forName: "lesson-type_simple_answer")
@@ -27,10 +29,17 @@ class LessonToday: ObservableObject {
 				let decodedData = try JSONDecoder().decode(Lesson.self, from: jsonData)
 				subject = decodedData.subject
 				quiz = decodedData.quiz
+				quiz.shuffle()
+				myTheme = MyTheme(setThemeName: decodedData.theme)
 			}
 		} catch {
 			print(error)
 		}
 	}
+	
+	/*
+	func getBorderStrokeColor() -> Color{
+		return Color.replyButtonStroke
+	}*/
 	
 }

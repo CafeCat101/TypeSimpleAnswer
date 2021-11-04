@@ -6,48 +6,7 @@
 //
 
 import SwiftUI
-import AVKit
 
-class SoundManager {
-	static let instance = SoundManager()
-	var player: AVAudioPlayer?
-	//var moviePlayer: AVPlayer?
-	enum SoundOption: String{
-		case correctAnswer = "Bright Right Answer 4"
-		case wrongAnswer = "Cartoon Brass Fail"
-		case finished = "Cartoon Big Win"
-	}
-	/*
-	enum MovieOption: String{
-		case finishLesson = "clapping_pingu"
-	}*/
-	
-	func playSound(sound:SoundOption){
-		guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: ".wav") else {
-			return
-		}
-		
-		do{
-			player = try AVAudioPlayer(contentsOf: url)
-			player?.play()
-		}catch let error{
-			print("error playing sound. \(error.localizedDescription)")
-		}
-	}
-	/*
-	func playMovie(movie:MovieOption){
-		guard let url = Bundle.main.url(forResource: movie.rawValue, withExtension: ".mp4") else {
-			return
-		}
-		
-		do{
-			moviePlayer = try AVPlayer(url: url)
-			moviePlayer?.play()
-		}catch let error{
-			print("error playing sound. \(error.localizedDescription)")
-		}
-	}*/
-}
 
 struct AnswerView: View {
 	@EnvironmentObject var lessonToday: LessonToday
@@ -68,7 +27,7 @@ struct AnswerView: View {
 							.aspectRatio(contentMode: .fit)
 							.frame(width:300)
 							.onAppear{
-								SoundManager.instance.playSound(sound: .finished)
+								SoundManager.instance.playSound(sound: lessonToday.myTheme.finishedLessonAudio)
 							}
 					}
 					HStack{
@@ -88,7 +47,7 @@ struct AnswerView: View {
 							.aspectRatio(contentMode: .fit)
 							.frame(width:300)
 							.onAppear{
-								SoundManager.instance.playSound(sound: .correctAnswer)
+								SoundManager.instance.playSound(sound: lessonToday.myTheme.correctAnswerAudio)
 							}
 						HStack{
 							Spacer()
@@ -135,7 +94,7 @@ struct AnswerView: View {
 								.aspectRatio(contentMode: .fit)
 								.frame(width:300)
 								.onAppear{
-									SoundManager.instance.playSound(sound: .wrongAnswer)
+									SoundManager.instance.playSound(sound: lessonToday.myTheme.wrongAnswerAudio)
 								}
 							Spacer()
 						}

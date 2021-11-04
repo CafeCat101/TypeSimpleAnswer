@@ -8,6 +8,7 @@
 import Foundation
 struct Lesson: Codable{
 	var subject:String
+	var theme:String
 	var quiz:[Quiz]
 }
 

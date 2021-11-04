@@ -30,7 +30,7 @@ struct ContentView: View {
 					}
 				}) {
 					Circle()
-						.strokeBorder(Color.yellow,lineWidth: 1)
+						.strokeBorder(Color.yellow, lineWidth: 1)
 						.background(Circle().foregroundColor(.arrowButton.opacity(0.4)))
 						.frame(width:70,height:70)
 						.overlay(

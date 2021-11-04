@@ -1,16 +1,17 @@
 {
-  "subject":"哪個比較大？",
-  "quiz":[
-    {
-      "asking":"Mus比Hasbi大對不對？",
-      "answer":"對",
-      "status":0
-    },
-    {
-      "asking":"Mus比Bugi大對不對？",
-      "answer":"對",
-      "status":0
-    },
+	"subject":"哪個比較大？",
+	"theme":"default",
+	"quiz":[
+		{
+			"asking":"Mus比Hasbi大對不對？",
+			"answer":"對",
+			"status":0
+		},
+		{
+			"asking":"Mus比Bugi大對不對？",
+			"answer":"對",
+			"status":0
+		},
 		{
 			"asking":"恐龍比貓頭鷹大對不對？",
 			"answer":"對",
@@ -21,11 +22,11 @@
 			"answer":"不對",
 			"status":0
 		},
-    {
-      "asking":"蝴蝶比貓頭鷹大對不對？",
-      "answer":"不對",
-      "status":0
-    },
+		{
+			"asking":"蝴蝶比貓頭鷹大對不對？",
+			"answer":"不對",
+			"status":0
+		},
 		{
 			"asking":"狗比長頸鹿大對不對？",
 			"answer":"不對",
@@ -50,5 +51,5 @@
 			"answer":"對",
 			"status":0
 		}
-  ]
+	]
 }

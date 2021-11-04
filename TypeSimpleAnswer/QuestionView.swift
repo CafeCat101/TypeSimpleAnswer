@@ -78,7 +78,7 @@ struct QuestionView: View {
 				self.questionText = lessonToday.quiz[lessonToday.currentLessonAt].asking
 			}
 		}else{
-			AnswerView().transition(.move(edge: .leading))
+		AnswerView().transition(.move(edge: .leading))
 		}
 	}
 }
