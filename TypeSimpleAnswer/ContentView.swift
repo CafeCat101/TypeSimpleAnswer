@@ -19,7 +19,7 @@ struct ContentView: View {
 					Spacer()
 					Text("Hello Ege!")
 						.font(.system(size: 60))
-						.foregroundColor(Color.black)
+						.foregroundColor(lessonToday.myTheme.firstPageTextColor)
 						.padding()
 					Spacer()
 				}
@@ -30,8 +30,8 @@ struct ContentView: View {
 					}
 				}) {
 					Circle()
-						.strokeBorder(Color.yellow, lineWidth: 1)
-						.background(Circle().foregroundColor(.arrowButton.opacity(0.4)))
+						.strokeBorder(lessonToday.myTheme.arrowButtonStroke, lineWidth: 1)
+						.background(Circle().foregroundColor(lessonToday.myTheme.arrowButtonBackground.opacity(lessonToday.myTheme.arrowButtonOpacity)))
 						.frame(width:70,height:70)
 						.overlay(
 							Image("arrow_right_md")
@@ -42,12 +42,12 @@ struct ContentView: View {
 				.buttonStyle(PlainButtonStyle())
 				Text(lessonToday.subject)
 					.font(.system(size: 40))
-					.foregroundColor(Color.black)
+					.foregroundColor(lessonToday.myTheme.firstPageTextColor)
 					.padding()
 				Spacer()
 			}
 			.background(
-				Image("tileable_bg61")
+				Image(lessonToday.myTheme.firstPageBackground)
 					.resizable(resizingMode: .tile)
 			)
 		}else{

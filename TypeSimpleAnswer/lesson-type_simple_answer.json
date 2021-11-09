@@ -1,54 +1,54 @@
 {
-	"subject":"哪個比較大？",
-	"theme":"default",
+	"subject":"哪個是硬的？\n哪個是軟的？",
+	"theme":"blueCircle",
 	"quiz":[
 		{
-			"asking":"Mus比Hasbi大對不對？",
+			"asking":"衣服是軟的對不對？",
 			"answer":"對",
 			"status":0
 		},
 		{
-			"asking":"Mus比Bugi大對不對？",
+			"asking":"葉子是軟的對不對？",
 			"answer":"對",
 			"status":0
 		},
 		{
-			"asking":"恐龍比貓頭鷹大對不對？",
+			"asking":"Hasbi的毛是軟的對不對？",
 			"answer":"對",
 			"status":0
 		},
 		{
-			"asking":"貓比大象大對不對？",
+			"asking":"電視是軟的對不對？",
 			"answer":"不對",
 			"status":0
 		},
 		{
-			"asking":"蝴蝶比貓頭鷹大對不對？",
+			"asking":"車門是軟的對不對？",
 			"answer":"不對",
 			"status":0
 		},
 		{
-			"asking":"狗比長頸鹿大對不對？",
+			"asking":"手機是硬的對不對？",
+			"answer":"對",
+			"status":0
+		},
+		{
+			"asking":"椅子是硬的對不對？",
+			"answer":"對",
+			"status":0
+		},
+		{
+			"asking":"窗簾是硬的對不對？",
 			"answer":"不對",
 			"status":0
 		},
 		{
-			"asking":"長頸鹿比兔子大對不對？",
-			"answer":"對",
-			"status":0
-		},
-		{
-			"asking":"獅子比老鼠大對不對？",
-			"answer":"對",
-			"status":0
-		},
-		{
-			"asking":"青蛙比北極熊大對不對？",
+			"asking":"毛巾是硬的對不對？",
 			"answer":"不對",
 			"status":0
 		},{
-			"asking":"狐狸比老鼠大對不對？",
-			"answer":"對",
+			"asking":"襪子是硬的對不對？",
+			"answer":"不對",
 			"status":0
 		}
 	]

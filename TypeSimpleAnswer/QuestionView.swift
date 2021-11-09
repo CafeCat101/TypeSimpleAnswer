@@ -21,7 +21,7 @@ struct QuestionView: View {
 					Spacer()
 					Text(self.questionText)
 						.font(.system(size: 50))
-						.foregroundColor(.replyButtonText)
+						.foregroundColor(lessonToday.myTheme.contentTextColor)
 						.padding(10)
 					Spacer()
 				}
@@ -33,11 +33,11 @@ struct QuestionView: View {
 					.textFieldStyle(PlainTextFieldStyle())
 					.background(
 						RoundedRectangle(cornerRadius: 25, style: .continuous)
-							.foregroundColor(.replyButton.opacity(0.3))
+							.foregroundColor(lessonToday.myTheme.contentButtonBackground.opacity(lessonToday.myTheme.textInputBackgroundOpacity))
 					)
 					.overlay(
 						RoundedRectangle(cornerRadius: 25, style: .continuous)
-							.strokeBorder(Color.replyButtonText, lineWidth: 1)
+							.strokeBorder(lessonToday.myTheme.contentTextColor, lineWidth: 1)
 					)
 				Spacer()
 					.frame(height:20)
@@ -52,23 +52,23 @@ struct QuestionView: View {
 					}
 				}) {
 					RoundedRectangle(cornerRadius: 25, style: .continuous)
-						.strokeBorder(Color.replyButtonStroke,lineWidth: 1)
+						.strokeBorder(lessonToday.myTheme.contentButtonStroke,lineWidth: 1)
 						.background(
 							RoundedRectangle(cornerRadius: 25, style: .continuous)
-								.foregroundColor(.replyButton.opacity(0.6)))
+								.foregroundColor(lessonToday.myTheme.contentButtonBackground.opacity(lessonToday.myTheme.contentButtonOpacity)))
 						.frame(width:120,height:50)
 						.overlay(
 							Text("回答")
 								.font(.system(size: 30))
 								.fontWeight(.semibold)
-								.foregroundColor(.replyButtonText)
+								.foregroundColor(lessonToday.myTheme.contentTextColor)
 						)
 				}
 				.buttonStyle(PlainButtonStyle())
 				Spacer()
 			}
 			.background(
-				Image("old_paper_background2")
+				Image(lessonToday.myTheme.contentPageBackground)
 					.resizable()
 			)
 			.onAppear{

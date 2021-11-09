@@ -28,7 +28,7 @@ class LessonToday: ObservableObject {
 				 let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
 				let decodedData = try JSONDecoder().decode(Lesson.self, from: jsonData)
 				subject = decodedData.subject
-				quiz = decodedData.quiz
+				//quiz = decodedData.quiz
 				quiz.shuffle()
 				myTheme = MyTheme(setThemeName: decodedData.theme)
 			}

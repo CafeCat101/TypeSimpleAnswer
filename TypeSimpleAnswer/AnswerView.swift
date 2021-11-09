@@ -11,6 +11,7 @@ import SwiftUI
 struct AnswerView: View {
 	@EnvironmentObject var lessonToday: LessonToday
 	@State private var goToView = "AnswerView"
+	@State private var getBackground = "old_paper_background2"
 	
 	var body: some View {
 		if self.goToView == "AnswerView" {
@@ -28,6 +29,7 @@ struct AnswerView: View {
 							.frame(width:300)
 							.onAppear{
 								SoundManager.instance.playSound(sound: lessonToday.myTheme.finishedLessonAudio)
+								getBackground = lessonToday.myTheme.contentPageBackground
 							}
 					}
 					HStack{
@@ -35,7 +37,7 @@ struct AnswerView: View {
 						Text("做完了！")
 							.font(.system(size: 50))
 							.fontWeight(.semibold)
-							.foregroundColor(.replyButtonText)
+							.foregroundColor(lessonToday.myTheme.contentTextColor)
 							.padding(10)
 						Spacer()
 					}
@@ -48,6 +50,7 @@ struct AnswerView: View {
 							.frame(width:300)
 							.onAppear{
 								SoundManager.instance.playSound(sound: lessonToday.myTheme.correctAnswerAudio)
+								getBackground = lessonToday.myTheme.contentPageBackground
 							}
 						HStack{
 							Spacer()
@@ -57,8 +60,8 @@ struct AnswerView: View {
 								}
 							}) {
 								Circle()
-									.strokeBorder(Color.yellow,lineWidth: 1)
-									.background(Circle().foregroundColor(.arrowButton.opacity(0.6)))
+									.strokeBorder(lessonToday.myTheme.arrowButtonStroke,lineWidth: 1)
+									.background(Circle().foregroundColor(lessonToday.myTheme.arrowButtonBackground.opacity(lessonToday.myTheme.arrowButtonOpacity)))
 									.frame(width:70,height:70)
 									.overlay(
 										Image("arrow_right_md")
@@ -79,8 +82,8 @@ struct AnswerView: View {
 								}
 							}) {
 								Circle()
-									.strokeBorder(Color.yellow,lineWidth: 1)
-									.background(Circle().foregroundColor(.arrowButton.opacity(0.6)))
+									.strokeBorder(lessonToday.myTheme.arrowButtonStroke,lineWidth: 1)
+									.background(Circle().foregroundColor(lessonToday.myTheme.arrowButtonBackground.opacity(lessonToday.myTheme.arrowButtonOpacity)))
 									.frame(width:70,height:70)
 									.overlay(
 										Image("arrow_left_md")
@@ -95,6 +98,7 @@ struct AnswerView: View {
 								.frame(width:300)
 								.onAppear{
 									SoundManager.instance.playSound(sound: lessonToday.myTheme.wrongAnswerAudio)
+									getBackground = lessonToday.myTheme.wrongAnswerBackground
 								}
 							Spacer()
 						}
@@ -105,7 +109,7 @@ struct AnswerView: View {
 				Spacer()
 			}
 			.background(
-				Image("old_paper_background2")
+				Image(getBackground)
 					.resizable()
 			)
 		}else{
