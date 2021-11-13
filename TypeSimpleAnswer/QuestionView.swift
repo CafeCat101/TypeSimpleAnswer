@@ -24,8 +24,8 @@ struct QuestionView: View {
 						Image(nsImage: image)
 							.resizable()
 							.aspectRatio(contentMode: .fit)
+							.shadow(color:.black, radius: 3, x:1, y: 1)
 							.border(lessonToday.myTheme.contentTextColor, width: 5)
-							.shadow(color: .black, radius: 2, x: 1, y: 1)
 							.frame(width:300, height:300)
 					}
 					Spacer()
