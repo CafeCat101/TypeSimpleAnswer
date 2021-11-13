@@ -17,54 +17,70 @@ struct QuestionView: View {
 		if self.goToView == "QuestionView" {
 			VStack{
 				Spacer()
+				
 				HStack{
 					Spacer()
-					Text(self.questionText)
-						.font(.system(size: 50))
-						.foregroundColor(lessonToday.myTheme.contentTextColor)
-						.padding(10)
+					if let image = NSImage(contentsOf: URL(fileURLWithPath: FileManager.default.homeDirectoryForCurrentUser.path+"/Ege/class_writing/macos/TypeSimpleAnswer/"+lessonToday.quiz[lessonToday.currentLessonAt].picture)) {
+						Image(nsImage: image)
+							.resizable()
+							.aspectRatio(contentMode: .fit)
+							.border(lessonToday.myTheme.contentTextColor, width: 5)
+							.shadow(color: .black, radius: 2, x: 1, y: 1)
+							.frame(width:300, height:300)
+					}
+					Spacer()
+						.frame(width:20)
+					VStack{
+						Text(self.questionText)
+							.font(.system(size: 50))
+							.foregroundColor(lessonToday.myTheme.contentTextColor)
+							.padding(10)
+						
+						TextField("對/不對", text: self.$answer)
+							.foregroundColor(Color.black)
+							.font(.system(size: 50))
+							.padding(15)
+							.frame(width:400)
+							.textFieldStyle(PlainTextFieldStyle())
+							.background(
+								RoundedRectangle(cornerRadius: 25, style: .continuous)
+									.foregroundColor(lessonToday.myTheme.contentButtonBackground.opacity(lessonToday.myTheme.textInputBackgroundOpacity))
+							)
+							.overlay(
+								RoundedRectangle(cornerRadius: 25, style: .continuous)
+									.strokeBorder(lessonToday.myTheme.contentTextColor, lineWidth: 1)
+							)
+						Spacer()
+							.frame(height:20)
+						
+						Button(action: {
+							if self.answer == lessonToday.quiz[lessonToday.currentLessonAt].answer {
+								lessonToday.quiz[lessonToday.currentLessonAt].status = 1
+							}else{
+								lessonToday.quiz[lessonToday.currentLessonAt].status = -1
+							}
+							withAnimation{
+							self.goToView = "AnswerView"
+							}
+						}) {
+							RoundedRectangle(cornerRadius: 22, style: .continuous)
+								.strokeBorder(lessonToday.myTheme.contentButtonStroke,lineWidth: 1)
+								.background(
+									RoundedRectangle(cornerRadius: 22, style: .continuous)
+										.foregroundColor(lessonToday.myTheme.contentButtonBackground.opacity(lessonToday.myTheme.contentButtonOpacity)))
+								.frame(width:180,height:60)
+								.overlay(
+									Text("回答")
+										.font(.system(size: 30))
+										.fontWeight(.semibold)
+										.foregroundColor(lessonToday.myTheme.contentTextColor)
+								)
+						}
+						.buttonStyle(PlainButtonStyle())
+					}
 					Spacer()
 				}
-				TextField("對/不對", text: self.$answer)
-					.foregroundColor(Color.black)
-					.font(.system(size: 50))
-					.padding(15)
-					.frame(width:400)
-					.textFieldStyle(PlainTextFieldStyle())
-					.background(
-						RoundedRectangle(cornerRadius: 25, style: .continuous)
-							.foregroundColor(lessonToday.myTheme.contentButtonBackground.opacity(lessonToday.myTheme.textInputBackgroundOpacity))
-					)
-					.overlay(
-						RoundedRectangle(cornerRadius: 25, style: .continuous)
-							.strokeBorder(lessonToday.myTheme.contentTextColor, lineWidth: 1)
-					)
-				Spacer()
-					.frame(height:20)
-				Button(action: {
-					if self.answer == lessonToday.quiz[lessonToday.currentLessonAt].answer {
-						lessonToday.quiz[lessonToday.currentLessonAt].status = 1
-					}else{
-						lessonToday.quiz[lessonToday.currentLessonAt].status = -1
-					}
-					withAnimation{
-					self.goToView = "AnswerView"
-					}
-				}) {
-					RoundedRectangle(cornerRadius: 25, style: .continuous)
-						.strokeBorder(lessonToday.myTheme.contentButtonStroke,lineWidth: 1)
-						.background(
-							RoundedRectangle(cornerRadius: 25, style: .continuous)
-								.foregroundColor(lessonToday.myTheme.contentButtonBackground.opacity(lessonToday.myTheme.contentButtonOpacity)))
-						.frame(width:120,height:50)
-						.overlay(
-							Text("回答")
-								.font(.system(size: 30))
-								.fontWeight(.semibold)
-								.foregroundColor(lessonToday.myTheme.contentTextColor)
-						)
-				}
-				.buttonStyle(PlainButtonStyle())
+				
 				Spacer()
 			}
 			.background(

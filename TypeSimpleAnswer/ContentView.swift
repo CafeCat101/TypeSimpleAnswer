@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
 	@State private var goToView = "ContentView"
 	@EnvironmentObject var lessonToday: LessonToday
+	//let image = NSImage(contentsOf: URL(fileURLWithPath: "/Users/LeonoreYardimli/Ege/visual-timer.jpg"))!
 	
 	var body: some View {
 		if self.goToView == "ContentView" {
@@ -46,6 +47,8 @@ struct ContentView: View {
 					.padding()
 				Spacer()
 			}
+			.onAppear(perform: {print(FileManager.default.homeDirectoryForCurrentUser.path)})
+			//.onAppear(perform: {print("---")})
 			.background(
 				Image(lessonToday.myTheme.firstPageBackground)
 					.resizable(resizingMode: .tile)

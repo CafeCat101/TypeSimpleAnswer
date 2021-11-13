@@ -11,9 +11,8 @@ import SwiftUI
 class LessonToday: ObservableObject {
 	@Published var subject:String = "我們來打字"
 	@Published var quiz: [Quiz] = [
-		Quiz(asking: "Simba是獅子對不對？", answer: "對", status: 0),
-		Quiz(asking: "Garfield是貓對不對？", answer: "對", status: 0),
-		Quiz(asking: "Tarzan是猴子對不對？", answer: "不對", status: 0)
+		Quiz(asking: "這是對！", picture:"", answer: "對", status: 0),
+		Quiz(asking: "這是不對！", picture:"", answer: "不對", status: 0)
 	]
 	@Published var currentLessonAt = 0
 	@Published var myTheme:MyTheme = MyTheme()
@@ -28,7 +27,7 @@ class LessonToday: ObservableObject {
 				 let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
 				let decodedData = try JSONDecoder().decode(Lesson.self, from: jsonData)
 				subject = decodedData.subject
-				//quiz = decodedData.quiz
+				quiz = decodedData.quiz
 				quiz.shuffle()
 				myTheme = MyTheme(setThemeName: decodedData.theme)
 			}

@@ -1,53 +1,16 @@
 {
-	"subject":"哪個是硬的？\n哪個是軟的？",
-	"theme":"blueCircle",
+	"subject":"她是誰? 他是誰? 牠是誰?",
+	"theme":"default",
 	"quiz":[
 		{
-			"asking":"衣服是軟的對不對？",
+			"asking":"牠是Garfield對不對？",
+			"picture":"garfield.jpeg",
 			"answer":"對",
 			"status":0
 		},
 		{
-			"asking":"葉子是軟的對不對？",
-			"answer":"對",
-			"status":0
-		},
-		{
-			"asking":"Hasbi的毛是軟的對不對？",
-			"answer":"對",
-			"status":0
-		},
-		{
-			"asking":"電視是軟的對不對？",
-			"answer":"不對",
-			"status":0
-		},
-		{
-			"asking":"車門是軟的對不對？",
-			"answer":"不對",
-			"status":0
-		},
-		{
-			"asking":"手機是硬的對不對？",
-			"answer":"對",
-			"status":0
-		},
-		{
-			"asking":"椅子是硬的對不對？",
-			"answer":"對",
-			"status":0
-		},
-		{
-			"asking":"窗簾是硬的對不對？",
-			"answer":"不對",
-			"status":0
-		},
-		{
-			"asking":"毛巾是硬的對不對？",
-			"answer":"不對",
-			"status":0
-		},{
-			"asking":"襪子是硬的對不對？",
+			"asking":"牠是Simba對不對？",
+			"picture":"tarzan.jpeg",
 			"answer":"不對",
 			"status":0
 		}
