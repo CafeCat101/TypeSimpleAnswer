@@ -9,8 +9,56 @@
 			"status":0
 		},
 		{
-			"asking":"牠是Simba對不對？",
+			"asking":"他是Tarzan對不對？",
 			"picture":"tarzan.jpeg",
+			"answer":"對",
+			"status":0
+		},
+		{
+			"asking":"她是Joy對不對？",
+			"picture":"joy.jpg",
+			"answer":"對",
+			"status":0
+		},
+		{
+			"asking":"牠是Zazu對不對？",
+			"picture":"zazu.jpeg",
+			"answer":"對",
+			"status":0
+		},
+		{
+			"asking":"牠是Simba對不對？",
+			"picture":"simba.jpg",
+			"answer":"對",
+			"status":0
+		},
+		{
+			"asking":"她是Sadness對不對？",
+			"picture":"jessie.jpg",
+			"answer":"不對",
+			"status":0
+		},
+		{
+			"asking":"他是Simba對不對？",
+			"picture":"tarzan.jpeg",
+			"answer":"不對",
+			"status":0
+		},
+		{
+			"asking":"她是Joy對不對？",
+			"picture":"riley.jpg",
+			"answer":"不對",
+			"status":0
+		},
+		{
+			"asking":"他是Tarzan對不對？",
+			"picture":"woody.jpg",
+			"answer":"不對",
+			"status":0
+		},
+		{
+			"asking":"她是Hasbi對不對？",
+			"picture":"garfield.jpeg",
 			"answer":"不對",
 			"status":0
 		}

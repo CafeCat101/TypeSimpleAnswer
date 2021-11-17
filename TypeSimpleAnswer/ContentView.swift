@@ -19,7 +19,7 @@ struct ContentView: View {
 				HStack{
 					Spacer()
 					Text("Hello Ege!")
-						.font(.system(size: 60))
+						.font(.system(size: 80))
 						.foregroundColor(lessonToday.myTheme.firstPageTextColor)
 						.padding()
 					Spacer()
@@ -42,7 +42,7 @@ struct ContentView: View {
 				}
 				.buttonStyle(PlainButtonStyle())
 				Text(lessonToday.subject)
-					.font(.system(size: 40))
+					.font(.system(size: 60))
 					.foregroundColor(lessonToday.myTheme.firstPageTextColor)
 					.padding()
 				Spacer()

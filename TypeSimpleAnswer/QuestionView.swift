@@ -26,19 +26,19 @@ struct QuestionView: View {
 							.aspectRatio(contentMode: .fit)
 							.shadow(color:.black, radius: 3, x:1, y: 1)
 							.border(lessonToday.myTheme.contentTextColor, width: 5)
-							.frame(width:300, height:300)
+							.frame(width:400, height:400)
 					}
 					Spacer()
 						.frame(width:20)
 					VStack{
 						Text(self.questionText)
-							.font(.system(size: 50))
+							.font(.system(size: 60))
 							.foregroundColor(lessonToday.myTheme.contentTextColor)
 							.padding(10)
 						
 						TextField("對/不對", text: self.$answer)
 							.foregroundColor(Color.black)
-							.font(.system(size: 50))
+							.font(.system(size: 60))
 							.padding(15)
 							.frame(width:400)
 							.textFieldStyle(PlainTextFieldStyle())
@@ -71,7 +71,7 @@ struct QuestionView: View {
 								.frame(width:180,height:60)
 								.overlay(
 									Text("回答")
-										.font(.system(size: 30))
+										.font(.system(size: 40))
 										.fontWeight(.semibold)
 										.foregroundColor(lessonToday.myTheme.contentTextColor)
 								)
