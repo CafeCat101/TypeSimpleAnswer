@@ -33,7 +33,7 @@ struct MyTheme{
 	
 	
 	init(setThemeName:String? = "default"){
-		if setThemeName == "blueCircle"{
+		if setThemeName == "blue"{
 			firstPageBackground = "t2_welcome_bg"
 			arrowButtonStroke = Color("t2_arrow_btn_stroke")
 			arrowButtonBackground = Color("t2_arrow_btn_background")

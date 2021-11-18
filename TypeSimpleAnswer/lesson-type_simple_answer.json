@@ -1,64 +1,64 @@
 {
-	"subject":"她是誰? 他是誰? 牠是誰?",
-	"theme":"default",
+	"subject":" 第一次上街買東西",
+	"theme":"blue",
 	"quiz":[
 		{
-			"asking":"牠是Garfield對不對？",
-			"picture":"garfield.jpeg",
+			"asking":"他們是佳佳和佳佳的媽媽對不對？",
+			"picture":"first_time_buying_img1.jpg",
 			"answer":"對",
 			"status":0
 		},
 		{
-			"asking":"他是Tarzan對不對？",
-			"picture":"tarzan.jpeg",
+			"asking":"媽媽要佳佳去買牛奶對不對？",
+			"picture":"first_time_buying_img1.jpg",
 			"answer":"對",
 			"status":0
 		},
 		{
-			"asking":"她是Joy對不對？",
-			"picture":"joy.jpg",
+			"asking":"佳佳去買牛奶的時後跌倒了對不對？",
+			"picture":"first_time_buying_img2.jpg",
 			"answer":"對",
 			"status":0
 		},
 		{
-			"asking":"牠是Zazu對不對？",
-			"picture":"zazu.jpeg",
+			"asking":"佳佳覺得跌倒好痛對不對？",
+			"picture":"first_time_buying_img2.jpg",
 			"answer":"對",
 			"status":0
 		},
 		{
-			"asking":"牠是Simba對不對？",
-			"picture":"simba.jpg",
+			"asking":"佳佳在店裡喊了好久都沒有人出來對不對？",
+			"picture":"first_time_buying_img3.jpg",
 			"answer":"對",
 			"status":0
 		},
 		{
-			"asking":"她是Sadness對不對？",
-			"picture":"jessie.jpg",
+			"asking":"佳佳和店裡的老闆是朋友對不對？",
+			"picture":"first_time_buying_img3.jpg",
 			"answer":"不對",
 			"status":0
 		},
 		{
-			"asking":"他是Simba對不對？",
-			"picture":"tarzan.jpeg",
+			"asking":"佳佳沒有給錢就拿牛奶對不對？",
+			"picture":"first_time_buying_img4.jpg",
 			"answer":"不對",
 			"status":0
 		},
 		{
-			"asking":"她是Joy對不對？",
-			"picture":"riley.jpg",
+			"asking":"佳佳沒有買到牛奶對不對？",
+			"picture":"first_time_buying_img4.jpg",
 			"answer":"不對",
 			"status":0
 		},
 		{
-			"asking":"他是Tarzan對不對？",
-			"picture":"woody.jpg",
+			"asking":"老闆娘要佳佳還給她牛奶對不對？",
+			"picture":"first_time_buying_img5.jpg",
 			"answer":"不對",
 			"status":0
 		},
 		{
-			"asking":"她是Hasbi對不對？",
-			"picture":"garfield.jpeg",
+			"asking":"佳佳要偷偷把牛奶拿走對不對？",
+			"picture":"first_time_buying_img5.jpg",
 			"answer":"不對",
 			"status":0
 		}
