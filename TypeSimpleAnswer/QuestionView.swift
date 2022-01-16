@@ -36,7 +36,7 @@ struct QuestionView: View {
 							.foregroundColor(lessonToday.myTheme.contentTextColor)
 							.padding(10)
 						
-						TextField("對/不對", text: self.$answer)
+						TextField("", text: self.$answer)
 							.foregroundColor(Color.black)
 							.font(.system(size: 60))
 							.padding(15)

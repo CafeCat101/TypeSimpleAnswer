@@ -1,65 +1,59 @@
 {
-	"subject":" 第一次上街買東西",
+	"subject":"10 11 12 13 14 15 16 17 17 19 20",
 	"theme":"blue",
 	"quiz":[
 		{
-			"asking":"他們是佳佳和佳佳的媽媽對不對？",
-			"picture":"first_time_buying_img1.jpg",
-			"answer":"對",
+			"asking":"10 11 12 13 14 15 16 17 17 19 20\n\n10的後面是什麼數字？",
+			"picture":"",
+			"answer":"11",
 			"status":0
 		},
 		{
-			"asking":"媽媽要佳佳去買牛奶對不對？",
-			"picture":"first_time_buying_img1.jpg",
-			"answer":"對",
+			"asking":"10 11 12 13 14 15 16 17 17 19 20\n\n12的後面是什麼數字？",
+			"picture":"",
+			"answer":"13",
 			"status":0
 		},
 		{
-			"asking":"佳佳去買牛奶的時後跌倒了對不對？",
-			"picture":"first_time_buying_img2.jpg",
-			"answer":"對",
+			"asking":"10 11 12 13 14 15 16 17 17 19 20\n\n13的後面是什麼數字？",
+			"picture":"",
+			"answer":"14",
 			"status":0
 		},
 		{
-			"asking":"佳佳覺得跌倒好痛對不對？",
-			"picture":"first_time_buying_img2.jpg",
-			"answer":"對",
+			"asking":"10 11 12 13 14 15 16 17 17 19 20\n\n14的後面是什麼數字？",
+			"picture":"",
+			"answer":"15",
 			"status":0
 		},
 		{
-			"asking":"佳佳在店裡喊了好久都沒有人出來對不對？",
-			"picture":"first_time_buying_img3.jpg",
-			"answer":"對",
+			"asking":"10 11 12 13 14 15 16 17 17 19 20\n\n15的後面是什麼數字？",
+			"picture":"",
+			"answer":"16",
 			"status":0
 		},
 		{
-			"asking":"佳佳和店裡的老闆是朋友對不對？",
-			"picture":"first_time_buying_img3.jpg",
-			"answer":"不對",
+			"asking":"10 11 12 13 14 15 16 17 17 19 20\n\n16的後面是什麼數字？",
+			"picture":"",
+			"answer":"17",
 			"status":0
 		},
 		{
-			"asking":"佳佳沒有給錢就拿牛奶對不對？",
-			"picture":"first_time_buying_img4.jpg",
-			"answer":"不對",
+			"asking":"10 11 12 13 14 15 16 17 17 19 20\n\n17的後面是什麼數字？",
+			"picture":"",
+			"answer":"18",
 			"status":0
 		},
 		{
-			"asking":"佳佳沒有買到牛奶對不對？",
-			"picture":"first_time_buying_img4.jpg",
-			"answer":"不對",
+			"asking":"10 11 12 13 14 15 16 17 17 19 20\n\n18的後面是什麼數字？",
+			"picture":"",
+			"answer":"19",
 			"status":0
 		},
 		{
-			"asking":"老闆娘要佳佳還給她牛奶對不對？",
-			"picture":"first_time_buying_img5.jpg",
-			"answer":"不對",
-			"status":0
-		},
-		{
-			"asking":"佳佳要偷偷把牛奶拿走對不對？",
-			"picture":"first_time_buying_img5.jpg",
-			"answer":"不對",
+			"asking":"10 11 12 13 14 15 16 17 17 19 20\n\n19的後面是什麼數字？",
+			"picture":"",
+			"answer":"20",
 			"status":0
 		}
 	]
